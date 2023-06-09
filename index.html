@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting visualizer</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="main">
+        <h1>Sorting visualizer</h1>
+        <!-- Navbar -->
+        <div class="submain">
+            <nav class="navbar navbar-expand-md">
+                <div class="container-fluid">
+                    <button data="true" class="newbtn btn btn-outline-success" id="new-array">New Array</button>
+                    <div class="row">
+                        <span class="range" id="range1">
+                            <span class="range-tag">Range</span>
+                            <input class="range-bar1" type="range" id="arr-sz" min="10" max="100" step=1 value=10>
+                        </span>
+                        <span class="range" id="range2">
+                            <span class="range-tag">Speed</span>
+                            <input class="range-bar2" type="range" id="swap-speed" min="10" max="1000" stepDown=10
+                                value=60>
+                        </span>
+                    </div>
+
+                    <button class=" navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="btn btn-outline-success"> Sort Options</span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <button class="btn btn-outline-primary" id="bubble">Bubble Sort</button>
+                            </li>
+                            <li class="nav-item">
+                                <button class="btn btn-outline-primary" id="selection">Selection Sort</button>
+                            </li>
+                            <li class="nav-item">
+                                <button class="btn btn-outline-primary" id="insertion">Insertion Sort</button>
+                            </li>
+                            <li class="nav-item">
+                                <button class="btn btn-outline-primary" id="quick">Quick Sort</button>
+                            </li>
+                            <li class="nav-item">
+                                <button class="btn btn-outline-primary" id="merge">Merge Sort</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Bars -->
+        <div id="bars" class="bars">
+
+        </div>
+    </div>
+
+
+
+    <!-- <script src="scripts.js"></script> -->
+    <script src="create.js"></script>
+    <script src="bubbleSort.js"></script>
+    <script src="selectionSort.js"></script>
+    <script src="insertionSort.js"></script>
+    <script src="quickSort.js"></script>
+    <script src="mergeSort.js"></script>
+</body>
+
+</html>
